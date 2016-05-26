@@ -26,7 +26,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-   
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -169,10 +171,9 @@
 
                 <h2 class="page-header">Notre clients</h2>
             </div>
-            <marquee BEHAVIOR="" class="banniere" scrolammount="25"  loop="654" width="75%" height="100%"><br><br>
+            <marquee BEHAVIOR="scroll" class="banniere" scrolammount="25"  loop="654"><br><br>
             <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a>
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                <img class="img-responsive customer-img" src="" alt="">
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
@@ -189,7 +190,6 @@
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
             </div>
-
             </marquee>
         </div>
 
@@ -210,7 +210,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-   
+
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({

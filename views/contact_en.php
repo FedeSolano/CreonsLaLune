@@ -53,7 +53,7 @@
                     <li>
                         <a href="?galerie">Galerie</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="?contact">Contact</a>
                     </li>
                     <li class="dropdown">
@@ -79,6 +79,7 @@
         </div>
         <!-- /.container -->
     </nav>
+
 
     <!-- Page Content -->
     <div class="container">
