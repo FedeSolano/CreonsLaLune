@@ -1082,11 +1082,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Comfortaa-Regular", /*Helvetica, Arial,*/ sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #111921;
 }
 input,
 button,
@@ -1184,7 +1184,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: "Comfortaa-Bold";
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -4592,11 +4592,11 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #62B0BC;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
-  color: #9d9d9d;
+  color: #131312;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -4604,10 +4604,10 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
-  color: #9d9d9d;
+  color: #131312;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #9d9d9d;
+  color: #131312;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
@@ -6756,5 +6756,32 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+@font-face {
+  font-family: Bernardo Moda;
+  src: url(../datas/fonts/bernardo_moda/BernardoModa.ttf);
+}
+@font-face {
+  font-family: Bernardo Moda Semibold;
+  src: url(../datas/fonts/bernardo_moda/BernardoModaSemibold.ttf);
+}
+@font-face {
+  font-family: Bernardo Moda-Bold;
+  src: url(../datas/fonts/bernardo_moda/BernardoModaBold.ttf);
+}
+@font-face {
+  font-family: Comfortaa-Bold;
+  src: url(../datas/fonts/comforta/Comfortaa-Bold.ttf);
+}
+@font-face {
+  font-family: Comfortaa-Regular;
+  src: url(../datas/fonts/comforta/Comfortaa-Regular.ttf);
+}
+@font-face {
+  font-family: Comfortaa-Light;
+  src: url(../datas/fonts/comforta/Comfortaa-Light.ttf);
+}
+p{
+  color:#62B0BC;
 }
 /*# sourceMappingURL=bootstrap.css.map */

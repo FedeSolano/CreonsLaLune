@@ -88,12 +88,13 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url(caqui.jpg);width:100%;height:100%;"></div>
+                <div class="fill" style="background-image:url(datas/images/caqui.jpg);width:100%;height:100%;"></div>
                 <div class="carousel-caption">
 
                 </div>
 
         </div>
+            </div>
 
         <!-- Controls -->
 
@@ -170,10 +171,9 @@
                 <h2 class="page-header">Notre clients</h2>
             </div>
             <marquee BEHAVIOR="" class="banniere" scrolammount="25"  loop="654" width="75%" height="100%"><br><br>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a>
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
             </div>
