@@ -12,3 +12,5 @@ $recup_acc_nd=mysqli_query($mysqli, "Select texte.* from texte INNER JOIN image 
 $nb3=mysqli_num_rows($recup_acc_nd);*/
 $recup_acc_fr = $connexion->query("Select texte.* from texte INNER JOIN image ON image.id= texte.image_id INNER JOIN langue ON langue.id= texte.langue_id INNER JOIN section ON section.id= texte.section_id INNER JOIN utilisateur ON utilisateur.id= texte.utilisateur_id where texte.section_id=1 and texte.langue_id=1");
 $nb= $recup_acc_fr->rowCount();
+$recup_acc_img = $connexion->query("SELECT image.* FROM image INNER JOIN section ON image.section_id=section.id Where section_id=2 ORDER BY id DESC LIMIT 6");
+$nb2= $recup_acc_img->rowCount();

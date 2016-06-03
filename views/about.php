@@ -30,7 +30,33 @@
 </head>
 
 <body>
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
 
+
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="item active">
+                    <img src="datas/images/caqui.jpg" alt="" class="img-responsive"/>
+
+
+                    <div class="carousel-caption">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Controls -->
+
+</header>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -116,7 +142,7 @@
         </div>
         <!-- /.row -->
 
-        <!-- Team Members -->
+        <!-- Team Members
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">Our Team</h2>
@@ -236,7 +262,7 @@
                 </div>
             </div>
         </div>
-        <!-- /.row -->
+        <!-- /.row -->  
 
         <!-- Our Customers -->
         <div class="row">

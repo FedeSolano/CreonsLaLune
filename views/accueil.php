@@ -117,7 +117,17 @@
     <div class="row">
         <div class="col-lg-offset-1  col-lg-10 col-lg-offset-1">
             <h1 class="page-header">
-                Bienvenu à Créons la Lune
+                <?php
+                if(isset ($_GET['fr'])){
+                    echo "";
+                }elseif(isset ($_GET['nd'])){
+                    echo "";
+                }elseif(isset ($_GET['es'])){
+                    echo "";
+                }else{
+                    echo" Bienvenu à Créons la Lune";}
+
+                ?>
             </h1>
         </div>
 
@@ -133,7 +143,7 @@
                             }
                             echo "<p>" . nl2br($accueil['ladesc']) . "</p>";
                         }
-                    
+
 
 
                     ?>
@@ -200,31 +210,62 @@
     </div>
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Notre clients</h2>
+                <h2 class="page-header">Notre derniers travaux</h2>
             </div>
-            <marquee BEHAVIOR="" class="banniere" scrolammount="25"  loop="654" width="75%" height="100%"><br><br>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
+            <?php
+            $recup_acc_img->execute();
+            if(empty($nb2)){
+                echo"somos vagos y no trabajamos";
+            }else{
+                while($lesimg= $recup_acc_img->fetch(PDO::FETCH_ASSOC)){
+                 echo'<div class="col-md-4 col-sm-6">'  ;
+                 echo'<a href="#">';
+                 echo'<img class="img-circle img-portfolio img-hover" src="'.$lesimg['lurl'].'" alt='.$lesimg['lalt'].'"">
+                </a>
+            </div>' ;
+                }
+            }
+            ?>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">
+                    <?php
+                    if(isset ($_GET['fr'])){
+                    echo "";
+                    }elseif(isset ($_GET['nd'])){
+                    echo "";
+                    }elseif(isset ($_GET['es'])){
+                    echo "";
+                    }else{
+                    echo"Notre clients";}
 
-            </marquee>
-			</div>
-    <!-- /.row -->
+                    ?>  
+                 </h2>
+             </div>
+             <marquee BEHAVIOR="" class="banniere" scrolammount="25"  loop="654" width="75%" height="100%"><br><br>
+                 <div class="col-md-2 col-sm-4 col-xs-6">
+                     <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                 </div>
+                 <div class="col-md-2 col-sm-4 col-xs-6">
+                     <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                 </div>
+                 <div class="col-md-2 col-sm-4 col-xs-6">
+                     <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                 </div>
+                 <div class="col-md-2 col-sm-4 col-xs-6">
+                     <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                 </div>
+                 <div class="col-md-2 col-sm-4 col-xs-6">
+                     <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                 </div>
+                 <div class="col-md-2 col-sm-4 col-xs-6">
+                     <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                 </div>
+
+             </marquee>
+             </div>
+     <!-- /.row -->
 
 
     <!-- Footer -->
