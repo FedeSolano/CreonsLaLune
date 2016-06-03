@@ -91,15 +91,18 @@
             <div class="col-lg-12">
                 <h1 class="page-header">Thumbnail Gallery</h1>
             </div>
-
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="1.png" data-lightbox="image-1" data-title="My caption">Image #1</a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="2.png" data-lightbox="image-2" data-title="My cqfaption">Image #2</a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="3.jpg" data-lightbox="image-3" data-title="My captionfqdfq">Image #3</a>
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div> <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div> <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">

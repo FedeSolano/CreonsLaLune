@@ -61,13 +61,13 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="portfolio-1-col.html">Français</a>
+                            <a href="?fr">Français</a>
                         </li>
                         <li>
-                            <a href="portfolio-2-col.html">English</a>
+                            <a href="?en">English</a>
                         </li>
                         <li>
-                            <a href="portfolio-3-col.html">Nederlands</a>
+                            <a href="?nd">Nederlands</a>
                         </li>
 
 
@@ -123,104 +123,81 @@
 
                 <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
                     <?php
-                    if(empty($nb)){
-                        echo "choricillos";
-                    }else{
-                        while($accueil=mysqli_fetch_assoc($recup_acc)){
-                            echo"<h2>".$accueil['titre']."</h2>";
-                            echo"<p>".nl2br($accueil['ladesc'])."</p>";
+                    $recup_acc_fr->execute();
+                        if (empty($nb)) {
+                            echo "tomatillos";
+                        } else {
+                            while ($accueil = $recup_acc_fr->fetch(PDO::FETCH_ASSOC)) {
+                                echo "<h2>" . $accueil['titre'] . "</h2>";
+                                echo "<p>" . nl2br($accueil['ladesc']) . "</p>";
+                            }
+                            echo "<p>" . nl2br($accueil['ladesc']) . "</p>";
                         }
-                    }
+                    
+
 
                     ?>
           </div>
-            <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+            <div class="col-md-offset-1 col-md-10 col-md-offset-1">
 
-        <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
-            <h2>About Modern Business</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique?
-                Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta
-                dolorem non blanditiis ex fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum
-                aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit
-                dolorum!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa
-                voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus
-                perspiciatis quis?</p>
-        </div>
-        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.2.0</h4>
-                    </div>
-                    <div class="panel-body">
-                        <?php
-                        echo 'choricillos';
-                        ?>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
-                            aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
-                            eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
+                <div class="col-md-12">
+                    <h2>About Modern Business</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique?
+                        Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta
+                        dolorem non blanditiis ex fugiat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum
+                        aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit
+                        dolorum!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa
+                        voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus
+                        perspiciatis quis?</p>
                 </div>
-            </div>
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.2.0</h4>
+                            </div>
+                            <div class="panel-body">
+                                <?php
+                                echo 'choricillos';
+                                ?>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
+                                    aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
+                                    eveniet incidunt dicta nostrum quod?</p>
+                                <a href="#" class="btn btn-default">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+                            </div>
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
+                                    aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
+                                    eveniet incidunt dicta nostrum quod?</p>
+                                <a href="#" class="btn btn-default">Learn More</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
-                            aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
-                            eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+                            </div>
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
+                                    aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
+                                    eveniet incidunt dicta nostrum quod?</p>
+                                <a href="#" class="btn btn-default">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
-                            aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
-                            eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <!-- /.row -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="page-header">Notre clients</h2>
-        </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">Notre clients</h2>
@@ -229,26 +206,33 @@
                 <div class="col-md-2 col-sm-4 col-xs-6">
                     <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
                 </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+                </div>
 
             </marquee>
+			</div>
+    <!-- /.row -->
 
+
+    <!-- Footer -->
+
+
+    <footer>
                 <p>Copyright &copy; Your Website 2014</p>
-            </div>
+            
         </div>
     </footer>
 
