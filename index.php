@@ -7,6 +7,7 @@
  */
 require_once 'models/config.php';
 require_once 'models/db.php';
+require_once 'views/header.php';
 // si non connecté
 if (!isset($_SESSION['clef']) || $_SESSION['clef'] != session_id()) {
     // variable permettant d'éviter de refaire la vérification ailleurs dans le code
@@ -19,3 +20,4 @@ if (!isset($_SESSION['clef']) || $_SESSION['clef'] != session_id()) {
     // récupération du routeur si connecté
     require_once "controlers/control-connect.php";
 }
+require_once "views/footer.php";

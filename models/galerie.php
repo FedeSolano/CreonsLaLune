@@ -5,5 +5,13 @@
  * Date: 18/05/2016
  * Time: 09:50
  */
-$recup_img = $connexion->query("SELECT image.* FROM image INNER JOIN section ON image.section_id=section.id Where section_id=2");
+try {
+    $recup_img = $connexion->query("SELECT i.letitre, i.lurl, i.lalt  
+FROM images i
+WHERE i.id_rubrique = 3;");
+
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
 $nb= $recup_img->rowCount();
+?>
