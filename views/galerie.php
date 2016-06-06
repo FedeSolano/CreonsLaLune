@@ -78,9 +78,12 @@
                     <li>
                         <a href="?about">Qui sommes-nous?</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="?galerie">Galerie</a>
                     </li>
+					<li>
+                    <a href="?messagerie">Messagerie</a>
+                </li>
                     <li>
                         <a href="?contact">Contact</a>
                     </li>

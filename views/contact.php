@@ -22,28 +22,89 @@
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <![endif]-->
-    <script>
-        $(document).ready(function(){
-            $("#slide1").click(function(){
-                $("form").slideToggle("slow");
-            });
-        });
+   
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <script>
+       $(document).ready(function(){
+		   $("#show").click(function(){
+        $("#formmail1").slideToggle("slow");
+    });
+});
     </script>
     <script>
         $(document).ready(function(){
-            $("#slide2").click(function(){
-                $("#email2").slideToggle("slow");
+            $("#show2").click(function(){
+                $("#formmail2").slideToggle("slow");
             });
         });
     </script>
+	<style>
+	.formmail1{
+		display:none;
+	}
+	header{
+		margin-top:-20px;
+	}</style>
 </head>
 
 <body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">Créons la Lune&nbsp;&nbsp;<i class="fa fa-moon-o"></i></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="?about">Qui sommes-nous?</a>
+                </li>
+                <li>
+                    <a href="?galerie">Galerie</a>
+                </li>
+				<li>
+                    <a href="?messagerie">Messagerie</a>
+                </li>
+                <li>
+                    <a href="?contact">Contact</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="?fr">Français</a>
+                        </li>
+                        <li>
+                            <a href="?en">English</a>
+                        </li>
+                        <li>
+                            <a href="?nd">Nederlands</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Header Carousel -->
 <header id="myCarousel" class="carousel slide">
     <!-- Indicators -->
 
@@ -65,14 +126,14 @@
             </div>
         </div>
 
-    </div>
+            </div>
 
 
     <!-- Controls -->
 
 </header>
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -93,7 +154,10 @@
                     <li>
                         <a href="?galerie">Galerie</a>
                     </li>
-                    <li>
+					<li>
+                    <a href="?messagerie">Messagerie</a>
+                </li>
+                    <li class="active">
                         <a href="?contact">Contact</a>
                     </li>
                     <li class="dropdown">
@@ -119,10 +183,8 @@
         </div>
         <!-- /.container -->
     </nav>
-
     <!-- Page Content -->
     <div class="container">
-
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
@@ -149,8 +211,39 @@
                             <small>Graphiste</small>
                         </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                        <span id="slide1" class="btn btn-danger" href="#"><span class="glyphicon glyphicon-envelope" style="font-family:'Comfortaa-Regular';">&nbsp;Envoyer un e-mail</span></span>
+                        <span id="show2" class="btn btn-danger" href="#"><span class="glyphicon glyphicon-envelope" style="font-family:'Comfortaa-Regular';">&nbsp;Envoyer un e-mail</span></span>
+						<div id="formmail2"  style="display:none">
+                        <form  name="sentMessage" id="contactForm" novalidate>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label style="padding-top:15px;">Full Name:</label>
+                                    <input type="text" class="form-control" id="name1" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Phone Number:</label>
+                                    <input type="tel" class="form-control" id="phone1" required data-validation-required-message="Please enter your phone number.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Email Address:</label>
+                                    <input type="email" class="form-control" id="email1" required data-validation-required-message="Please enter your email address.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Message:</label>
+                                    <textarea rows="10" cols="100" class="form-control" id="message1" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                                </div>
+                            </div>
+                            <div id="success"></div>
 
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                            </div>
                         <ul class="list-inline">
                             <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
                             </li>
@@ -170,40 +263,33 @@
                             <small>Commerciale</small>
                         </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                        <span id="slide1" class="btn btn-danger" href="#"><span class="glyphicon glyphicon-envelope" style="font-family:'Comfortaa-Regular';">&nbsp;Envoyer un e-mail</span></span>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
-                        <div id="email1">
+                        <span id="show" class="btn btn-danger" href="#"><span class="glyphicon glyphicon-envelope" style="font-family:'Comfortaa-Regular';">&nbsp;Envoyer un e-mail</span></span>
+                        
+                        <div id="formmail1"  style="display:none">
                         <form  name="sentMessage" id="contactForm" novalidate>
                             <div class="control-group form-group">
                                 <div class="controls">
-                                    <label>Full Name:</label>
-                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                                    <label style="padding-top:15px;">Full Name:</label>
+                                    <input type="text" class="form-control" id="name2" required data-validation-required-message="Please enter your name.">
                                     <p class="help-block"></p>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Phone Number:</label>
-                                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" id="phone2" required data-validation-required-message="Please enter your phone number.">
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Email Address:</label>
-                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" id="email2" required data-validation-required-message="Please enter your email address.">
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Message:</label>
-                                    <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                                    <textarea rows="10" cols="100" class="form-control" id="message2" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                                 </div>
                             </div>
                             <div id="success"></div>
@@ -211,6 +297,14 @@
                             <button type="submit" class="btn btn-primary">Send Message</button>
                         </form>
                             </div>
+							<ul class="list-inline">
+                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
+                            </li>
+                        </ul>
                             </div>
                         </div>
                     </div>

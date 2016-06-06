@@ -1,19 +1,19 @@
 <?php
-/* check if fields passed are empty
-if(empty($_POST['name'])  		||
-   empty($_POST['phone']) 		||
-   empty($_POST['email']) 		||
-   empty($_POST['message'])	||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+// check if fields passed are empty
+if(empty($_POST['name1'])  		||
+   empty($_POST['phone1']) 		||
+   empty($_POST['email1']) 		||
+   empty($_POST['message1'])	||
+   !filter_var($_POST['email1'],FILTER_VALIDATE_EMAIL))
    {
-	echo "";
+	echo "No arguments Provided!";
 	return false;
    }
 	
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
+$name = $_POST['name1'];
+$phone = $_POST['phone1'];
+$email_address = $_POST['email1'];
+$message = $_POST['message1'];
 	
 // create email body and send it	
 $to = 'fedesolanog@gmail.com'; // PUT YOUR EMAIL ADDRESS HERE

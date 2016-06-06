@@ -73,12 +73,15 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <li class="active">
                         <a href="?about">Qui sommes-nous?</a>
                     </li>
                     <li>
                         <a href="?galerie">Galerie</a>
                     </li>
+					<li>
+                    <a href="?messagerie">Messagerie</a>
+                </li>
                     <li>
                         <a href="?contact">Contact</a>
                     </li>

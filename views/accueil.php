@@ -54,6 +54,9 @@
                 <li>
                     <a href="?galerie">Galerie</a>
                 </li>
+				<li>
+                    <a href="?messagerie">Messagerie</a>
+                </li>
                 <li>
                     <a href="?contact">Contact</a>
                 </li>
