@@ -1,19 +1,26 @@
 <?php
-/*LES TEXTES ET LES TITRES DE L'ACCUEIL*/
+/*LES TEXTES DE L'ACCUEIL*/
 try {
-    $recupText = $connexion->query("SELECT textes.descFR, textes.descNL, textes.descEN, t.titreFR, t.titreNL, t.titreEN  FROM textes
-INNER JOIN titres t 
-ON t.id_rubrique = 1
-WHERE textes.id_rubrique = 1;");
+    $recupText = $connexion->query("SELECT textes.descFR, textes.descNL, textes.descEN  FROM textes
+WHERE id_rubrique = 1;");
 
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
 $text = $recupText->fetchAll(PDO::FETCH_ASSOC);
 
+/*LES TITRES DE L'ACCUEIL*/
+try {
+    $recupTitres = $connexion->query("SELECT titreFR, titreNL, titreEN  FROM titres
+WHERE id_rubrique = 1;");
+
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+$titr = $recupTitres->fetchAll(PDO::FETCH_ASSOC);
 
 
-/*LES IMAGES DE L'ACCUEIL*/
+/*LES IMAGES DE L'ACCUEIL (repris pour l'instant dans la rubrique 3)*/
 try {
     $recupImg = $connexion->query("SELECT i.letitre, i.lurl, i.lalt  
 FROM images i

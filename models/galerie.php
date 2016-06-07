@@ -13,5 +13,5 @@ WHERE i.id_rubrique = 3;");
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
-$nb= $recup_img->rowCount();
+$nb = $recup_img->rowCount();
 ?>

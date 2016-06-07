@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Lun 06 Juin 2016 à 10:55
+-- Généré le :  Mar 07 Juin 2016 à 16:15
 -- Version du serveur :  5.5.42
 -- Version de PHP :  5.6.10
 
@@ -32,25 +32,25 @@ CREATE TABLE `images` (
   `lurl` varchar(505) DEFAULT NULL,
   `lalt` varchar(305) DEFAULT NULL,
   `id_rubrique` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `images`
 --
 
 INSERT INTO `images` (`id`, `letitre`, `lurl`, `lalt`, `id_rubrique`) VALUES
-(2, 'Test 1', 'test_images/1.jpg', 'photo1', 1),
-(3, 'Test 2', 'test_images/2.jpg', 'p2', 1),
-(4, 'Test 3', 'test_images/3.jpg', 'p3', 1),
-(5, 'Test 4', 'test_images/4.jpg', 'p4', 1),
-(6, 'Test 5', 'test_images/5.jpg', 'p5', 1),
-(7, 'Test 6', 'test_images/6.jpg', 'p6', 1),
-(8, 'Test 7', 'test_images/7.jpg', 'p7', 1),
-(9, 'Test 8', 'test_images/8.jpg', 'p8', 1),
-(10, 'Test 9', 'test_images/9.jpg', 'p9', 1),
-(11, 'Test 10', 'test_images/10.jpg', 'p10', 1),
-(12, 'Test 11', 'test_images/11.jpg', 'p11', 1),
-(13, 'test 12', 'test_images/12.jpg', 'p12', 1);
+(2, 'Test 1', 'test_images/1.jpg', 'photo1', 3),
+(3, 'Test 2', 'test_images/2.jpg', 'p2', 3),
+(4, 'Test 3', 'test_images/3.jpg', 'p3', 3),
+(5, 'Test 4', 'test_images/4.jpg', 'p4', 3),
+(6, 'Test 5', 'test_images/5.jpg', 'p5', 3),
+(7, 'Test 6', 'test_images/6.jpg', 'p6', 3),
+(8, 'Test 7', 'test_images/7.jpg', 'p7', 3),
+(9, 'Test 8', 'test_images/8.jpg', 'p8', 3),
+(10, 'Test 9', 'test_images/9.jpg', 'p9', 3),
+(11, 'Test 10', 'test_images/10.jpg', 'p10', 3),
+(12, 'Test 11', 'test_images/11.jpg', 'p11', 3),
+(13, 'test 12', 'test_images/12.jpg', 'p12', 3);
 
 -- --------------------------------------------------------
 
@@ -86,14 +86,15 @@ CREATE TABLE `textes` (
   `descNL` text CHARACTER SET utf8 NOT NULL,
   `descEN` text CHARACTER SET utf8 NOT NULL,
   `id_rubrique` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `textes`
 --
 
 INSERT INTO `textes` (`id`, `nom`, `descFR`, `descNL`, `descEN`, `id_rubrique`) VALUES
-(1, 'DescAccueil', 'test Text FR test Text FR test Text FR test Text FR test Text FR test Text FR test Text FRtest Text FRtest Text FRtest Text FR test Text FR test Text FRtest Text FRtest Text FRtest Text FR test Text FRtest Text FRtest Text FRtest Text FRtest Text FR test Text FR', 'test Text NL test Text NL test Text NL test Text NLtest Text NLtest Text NLtest Text NL test Text NLtest Text NLtest Text NL test Text NLtest Text NLtest Text NL test Text NLtest Text NLtest Text NL test Text NL', 'test Text EN test Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text EN test Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text EN test Text ENtest Text ENtest Text ENtest Text EN', 1);
+(1, 'DescAccueil', 'test Text FR test Text FR test Text FR test Text FR test Text FR test Text FR test Text FRtest Text FRtest Text FRtest Text FR test Text FR test Text FRtest Text FRtest Text FRtest Text FR test Text FRtest Text FRtest Text FRtest Text FRtest Text FR test Text FR', 'test Text NL test Text NL test Text NL test Text NLtest Text NLtest Text NLtest Text NL test Text NLtest Text NLtest Text NL test Text NLtest Text NLtest Text NL test Text NLtest Text NLtest Text NL test Text NL', 'test Text EN test Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text EN test Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text ENtest Text EN test Text ENtest Text ENtest Text ENtest Text EN', 1),
+(2, 'paraf1accueil', '(FR)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur\r\n                    similique?\r\n                    Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta\r\n                    dolorem non blanditiis ex fugiat.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur\r\n                    similique?\r\n                    Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta\r\n                    dolorem non blanditiis ex fugiat.', '(NL)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur\r\n                    similique?\r\n                    Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta\r\n                    dolorem non blanditiis ex fugiat.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur\r\n                    similique?\r\n                    Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta\r\n                    dolorem non blanditiis ex fugiat.', '(EN)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur\r\n                    similique?\r\n                    Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta\r\n                    dolorem non blanditiis ex fugiat.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur\r\n                    similique?\r\n                    Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta\r\n                    dolorem non blanditiis ex fugiat.', 1);
 
 -- --------------------------------------------------------
 
@@ -115,8 +116,9 @@ CREATE TABLE `titres` (
 --
 
 INSERT INTO `titres` (`id`, `nom`, `titreFR`, `titreNL`, `titreEN`, `id_rubrique`) VALUES
-(5, 'nomDuTitre', 'testTitreFR', 'testTitreNL', 'testTitreEN', 1),
-(6, 'GrandTitre', 'Bienvenu à Créons la Lune\r\n', 'NL à Créons la Lune\r\n', 'Welcome to creons la lune', 1);
+(1, 'GrandTitre', 'Bienvenu à Créons la Lune\r\n', 'NL à Créons la Lune\r\n', 'Welcome to creons la lune', 1),
+(2, 'titre1accueil', 'testTitreFR1', 'testTitreNL1', 'testTitreEN1', 1),
+(3, 'titre2accueil', 'testTitreFR2', 'testTitreNL2', 'testTitreEN2', 1);
 
 -- --------------------------------------------------------
 
@@ -185,7 +187,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT pour la table `rubrique`
 --
@@ -195,7 +197,7 @@ ALTER TABLE `rubrique`
 -- AUTO_INCREMENT pour la table `textes`
 --
 ALTER TABLE `textes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `titres`
 --

@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>Créons la Lune</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -115,7 +115,7 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="item active">
-          <img src="datas/images/caqui.jpg" alt="" class="img-responsive"/>
+          <img src="datas/images/caqui.jpg" alt="logo" class="img-responsive"/>
 
 
           <div class="carousel-caption">
