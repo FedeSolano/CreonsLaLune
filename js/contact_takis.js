@@ -29,10 +29,10 @@ $(function() {
                 url: "./bin/contact_takis.php",
                 type: "POST",
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
+                    name1: name,
+                    phone1: phone,
+                    email1: email,
+                    message1: message
                 },
                 cache: false,
                 success: function() {

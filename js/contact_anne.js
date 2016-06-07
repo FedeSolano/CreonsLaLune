@@ -7,7 +7,7 @@
  */
 $(function() {
 
-    $("#contactForm2 input,#contactForm textarea").jqBootstrapValidation({
+    $("#contactForm2 input,#contactForm2 textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // something to have when submit produces an error ?
@@ -29,10 +29,10 @@ $(function() {
                 url: "./bin/contact_anne.php",
                 type: "POST",
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
+                    name2: name,
+                    phone2: phone,
+                    email2: email,
+                    message2: message
                 },
                 cache: false,
                 success: function() {

@@ -25,6 +25,10 @@ if (empty($_GET)){
     require_once 'models/contact.php';
     $titre= "Bienvenue chez Créons la Lune";
     require_once 'views/contact.php';
+}elseif(isset($_GET['login'])){
+    require_once 'models/login.php';
+    $titre= "Bienvenue chez Créons la Lune";
+    require_once 'views/login.php';
 }else{
     require_once 'views/404.php';
 }
