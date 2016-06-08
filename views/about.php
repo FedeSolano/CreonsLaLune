@@ -27,7 +27,8 @@
             <div class="col-md-6">
                 <h2>About Modern Business</h2>
                 <?php
-                echo'choricillos';
+                if(isset ($_GET['about']) && isset ($_GET['nd']))
+                echo'test ND';
                 ?>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>

@@ -24,6 +24,7 @@
 
 <script src="js/contact_anne.js"></script>
 
+<script src="lightbox2-master/dist/js/lightbox.js"></script>
 
 
 </body>

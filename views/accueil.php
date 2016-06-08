@@ -117,11 +117,11 @@ $texte2 = nl2br($text[1][$champText]);
             <div class="class-lg-10 text-center">
                 <?php
                 while ($img = $recupImg->fetch(PDO::FETCH_ASSOC)) {
-                    echo '<div class="col-md-4 col-sm-6">';
-                    echo '<a href="#">';
-                    echo '<img class="img-circle img-portfolio img-hover" src="' . $img['lurl'] . '" alt=' . $img['lalt'] . '"">
-                </a>
-            </div>';
+                    echo '<div class="col-md-4 col-xs-6 thumb">';
+
+                    echo '<a class="thumbnail" href="'.$img['lurl'].'" data-lightbox="roadtrip" data-title="'.$img['lalt'].'">';
+                    echo '<img class="img-responsive img-hover" src ="'.$img['lurl'].'" alt = "'.$img['lalt'].' data-lightbox="roadtrip" data-title="'.$img['lalt'].'"" ></a >
+            </div >';
                 }
                 ?>
             </div>

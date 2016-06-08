@@ -8,7 +8,7 @@
 if (empty($_GET) || isset($_GET['fr']) || isset($_GET['nd']) || isset($_GET['en'])) {
     require_once 'models/accueil.php';
     require_once 'views/accueil.php';
-} elseif (isset($_GET['about'])) {
+} elseif (isset($_GET['about']) || ( isset ($_GET['about']) && (isset($_GET['fr']) || isset($_GET['nd']) || isset($_GET['en']))) ) {
     require_once 'models/about.php';
     require_once 'views/about.php';
 } elseif (isset($_GET['galerie'])) {
