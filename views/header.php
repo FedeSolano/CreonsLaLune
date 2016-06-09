@@ -326,6 +326,9 @@ echo'
 ?>
 
 <!-- Header Carousel -->
+<?php
+if(!$_SESSION){
+echo'
 <header id="myCarousel" class="carousel slide">
   <!-- Indicators -->
 
@@ -352,4 +355,8 @@ echo'
 
   <!-- Controls -->
 
-</header>
+</header>';
+  }else{
+  
+}
+?>
