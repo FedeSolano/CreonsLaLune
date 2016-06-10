@@ -124,7 +124,7 @@ switch ($n) {
         $champGAL = "Galerij";
         $champMESS = "Messagerie";
         $champCON = "Contact";
-        $champLANG = "taal";
+        $champLANG = "Taal";
         break;
 }
 }

@@ -1,15 +1,37 @@
-
-
-    <!-- Page Content -->
+<?php
+$champTitr = "titreFR";
+$champText = "descFR";
+//Langues
+$i = $_SESSION["lang"];
+switch ($i) {
+    case ("EN"):
+        $champTitr = "titreEN";
+        $champText = "descEN";
+        break;
+    case ("NL"):
+        $champTitr = "titreNL";
+        $champText = "descNL";
+        break;
+}
+?>
+<!-- Page Content -->
     <div class="container">
 
         <div class="row">
 
             <div class="col-lg-12">
                 <h1 class="page-header"><?php
-
-                        echo"Galerie de nos travaux";
-
+                    switch ($i){
+                        case("EN"):
+                            echo"Creations gallery";
+                            break;
+                        case ("NL"):
+                            echo "Galerij van onze werk";
+                            break;
+                        default:
+                            echo "Galerie de nos créations";
+                            break;
+                    }
                     ?>
                 </h1>
             </div>

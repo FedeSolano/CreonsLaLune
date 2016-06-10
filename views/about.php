@@ -1,20 +1,50 @@
+<?php
+$champTitr = "titreFR";
+$champText = "descFR";
+//Langues
+$i = $_SESSION["lang"];
+switch ($i) {
+    case ("EN"):
+        $champTitr = "titreEN";
+        $champText = "descEN";
+        break;
+    case ("NL"):
+        $champTitr = "titreNL";
+        $champText = "descNL";
+        break;
+}
 
 
 
+/*
+$GrandTitre = $titr[0][$champTitr]; // Attention [0]= id"1", [1]= id"2" ect...
+$titre1 = $titr[1][$champTitr];
+$texte1 = nl2br($text[0][$champText]);
+$titre2 = $titr[2][$champTitr];
+$texte2 = nl2br($text[1][$champText]);*/
+
+?>
     <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">About
-                    <small>Subheading</small>
+                <h1 class="page-header"><?php
+                    switch ($i){
+                        case("EN"):
+                            echo"About Créons la lune";
+                            break;
+                        case ("NL"):
+                            echo "Over Créons la lune";
+                            break;
+                        default:
+                            echo "Sur Créons la lune";
+                            break;
+                    }
+                    ?>
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a>
-                    </li>
-                    <li class="active">About</li>
-                </ol>
+
             </div>
         </div>
         <!-- /.row -->
@@ -26,6 +56,17 @@
             </div>
             <div class="col-md-6">
                 <h2><?php
+                    switch ($i){
+                        case("EN"):
+                            echo"What do we do?";
+                            break;
+                        case ("NL"):
+                            echo "Wat Créons la Lune doet?";
+                            break;
+                        default:
+                            echo "Qu'est-ce qu'on fait?";
+                            break;
+                    }
                     ?></h2>
                 <?php
                 if(isset ($_GET['about']) && isset ($_GET['nd']))

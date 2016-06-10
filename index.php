@@ -2,7 +2,9 @@
 session_start();
 require_once 'models/config.php';
 require_once 'models/db.php';
+
 require_once 'views/header.php';
+
 if(isset($_SESSION[''])){
     $_SESSION['']=$_SESSION['connect'];
 }

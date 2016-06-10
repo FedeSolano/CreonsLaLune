@@ -9,12 +9,14 @@
       <hr>
       <br>
       <br>-->
-      <div class="col-lg-4">
+      <?php
+      if(!isset($_GET['contact'])){
+     echo ' <div class="col-lg-4">
         <h3>Contact Information</h3>
         <p>Some Address 987, NY<br/>
           <i class="fa fa-phone fa-2x" style="font-size:19px;"></i> +34 9884 4893 <br/>
           <i class="fa fa-mobile fa-2x"></i> +34 59855 9853 <br/>
-          <i class="fa fa-envelope fa-2x"  style="font-size:15px;"></i> <a href="#"> agency@blacktie.co</a> <br/>
+          <i class="fa fa-envelope-o fa-2x"  style="font-size:15px;"></i> <a href="#"> agency@blacktie.co</a> <br/>
         </p>
       </div><!-- col -->
 
@@ -43,8 +45,9 @@
             <a href="#"><i class="fa fa-youtube-square fa-2x" style="font-size:45px"></i></a>
           </li>
         </ul>
-      </div><!-- col -->
-
+      </div>';
+}
+      ?>
       <div class="col-lg-4">
         <h3>Subscribe to our newsletter</h3>
         <form class="form-horizontal" role="form">
