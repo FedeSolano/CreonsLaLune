@@ -5487,10 +5487,11 @@ button.list-group-item-danger.active:focus {
 }
 .panel-footer {
   padding: 10px 15px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
+  background-color: #333333;
+  border-top: 1px solid #333333;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  margin-bottom:0px;
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
@@ -6790,5 +6791,11 @@ button.close {
 }
 p{
   color:#62B0BC;
+}
+#footerwrap{
+  background-color: #494339;
+  padding-top:-30px;
+  text-align:center;
+  color:#D7D4C7;
 }
 /*# sourceMappingURL=bootstrap.css.map */

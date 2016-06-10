@@ -143,6 +143,7 @@ $texte2 = nl2br($text[1][$champText]);
 
             </marquee>
         </div>
+        </div>
         <!-- /.row -->
 
 
