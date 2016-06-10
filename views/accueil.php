@@ -2,7 +2,7 @@
 $champTitr = "titreFR";
 $champText = "descFR";
 //Langues
-$i = $_SESSION["lang"];
+$i = isset($_SESSION["lang"]) ? $_SESSION["lang"] : NULL;
 switch ($i) {
     case ("EN"):
         $champTitr = "titreEN";
@@ -110,8 +110,44 @@ $texte2 = nl2br($text[1][$champText]);
                 while ($img = $recupImg->fetch(PDO::FETCH_ASSOC)) {
                     echo '<div class="col-md-4 col-xs-6 thumb">';
 
-                    echo '<a class="thumbnail" href="' . $img['lurl'] . '" data-lightbox="roadtrip" data-title="' . $img['lalt'] . '">';
-                    echo '<img class="img-responsive img-hover" src ="' . $img['lurl'] . '" alt = "' . $img['lalt'] . ' data-lightbox="roadtrip" data-title="' . $img['lalt'] . '"" ></a >
+                    echo '<a class="thumbnail" href="' . $img['lurl'] . '" data-lightbox="roadtrip" data-title="';
+                    switch ($i){
+                        case("EN"):
+                            echo $img['altEN'];
+                            break;
+                        case ("NL"):
+                            echo $img['altNL'];
+                            break;
+                        default:
+                            echo $img['altFR'];
+                            break;
+                    }
+                    echo '">';
+                    echo '<img class="img-responsive img-hover" src ="' . $img['lurl'] . '" alt = "';
+                    switch ($i){
+                        case("EN"):
+                            echo $img['altEN'];
+                            break;
+                        case ("NL"):
+                            echo $img['altNL'];
+                            break;
+                        default:
+                            echo $img['altFR'];
+                            break;
+                    }
+                    echo' data-lightbox="roadtrip" data-title="';
+                    switch ($i){
+                        case("EN"):
+                            echo $img['altEN'];
+                            break;
+                        case ("NL"):
+                            echo $img['altNL'];
+                            break;
+                        default:
+                            echo $img['altFR'];
+                            break;
+                    }
+                    echo'"" ></a >
             </div >';
                 }
                 ?>

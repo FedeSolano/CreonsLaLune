@@ -1,5 +1,5 @@
 <?php
-$i = $_SESSION["lang"];
+$i = isset($_SESSION["lang"]) ? $_SESSION["lang"] : NULL;
 switch ($i) {
     case ("EN"):
         $champTitr = "titreEN";

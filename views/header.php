@@ -107,7 +107,7 @@ $champMESS = "Messagerie";
 $champCON = "Contact";
 $champLANG = "Langue";
 if(!isset($_SESSION[''])){
-$n = $_SESSION["lang"];                                                         // Les variables de la NAVIGATION
+    $n = isset($_SESSION["lang"]) ? $_SESSION["lang"] : NULL;                                                        // Les variables de la NAVIGATION
 
 switch ($n) {
     case ("EN"):
@@ -126,6 +126,7 @@ switch ($n) {
         $champCON = "Contact";
         $champLANG = "Taal";
         break;
+    
 }
 }
 ?>

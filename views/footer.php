@@ -11,7 +11,7 @@
       <br>-->
       <?php
       if(!isset($_GET['contact'])){
-     echo ' <div class="col-lg-4">
+     echo ' <div class="col-sm-4">
         <h3>Contact Information</h3>
         <p>Some Address 987, NY<br/>
           <i class="fa fa-phone fa-2x" style="font-size:19px;"></i> +34 9884 4893 <br/>
@@ -21,8 +21,20 @@
       </div><!-- col -->
 
 
-      <div class="col-lg-4">
-        <h3>Social Network</h3>
+      <div class="col-sm-4">
+        <h3>';
+        switch ($i){
+          case("EN"):
+            echo"Social networks";
+            break;
+          case ("NL"):
+            echo "Sociale netwerken";
+            break;
+          default:
+            echo "Résaux sociaux";
+            break;
+        };
+        echo' </h3>
         <ul class="list-unstyled list-inline list-social-icons">
           <li>
             <a href="https://www.facebook.com/profile.php?id=100011425282091&fref=ts" target="_blank"><i class="fa fa-facebook-square fa-2x" style="font-size:45px; colour:#0e385f"></i></a>
@@ -48,8 +60,20 @@
       </div>';
 }
       ?>
-      <div class="col-lg-4">
-        <h3>Subscribe to our newsletter</h3>
+      <div class="col-sm-4">
+        <h3><?php
+          switch ($i){
+            case("EN"):
+              echo"Subscribe to our newsletter";
+              break;
+            case ("NL"):
+              echo "Teken onze newsletter in";
+              break;
+            default:
+              echo "Inscrivez vous à notre newsletter";
+              break;
+          }
+          ?></h3>
         <form class="form-horizontal" role="form">
           <div class="form-group">
             <label for="inputEmail1" class="col-lg-4 control-label"></label>
@@ -82,7 +106,7 @@
 </footer>
 <div id="footerwrap">
   <div class="container">
-    <h4 style=" font-family: Comfortaa-Light">Créons La Lune - Copyright 2016</h4>
+    <small style=" font-family: Comfortaa-Light">Créons La Lune - &copy; 2016</small>
   </div>
 </div>
 <!-- /.container -->

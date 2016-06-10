@@ -1136,7 +1136,7 @@ img {
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+
   -webkit-transition: all .2s ease-in-out;
        -o-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
@@ -5023,7 +5023,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #ddd;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -6798,4 +6798,23 @@ p{
   text-align:center;
   color:#D7D4C7;
 }
+#a-thumbnail{
+  margin-bottom: 0px;
+}
+.img-titre{
+  height:100%;
+  widht:100%;
+  background-color: #fff;
+  margin-top: -5px;
+  margin-bottom: 54px;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color:  #ddd;
+  border-radius: 4px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:5px;
+  padding-top:5px;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */

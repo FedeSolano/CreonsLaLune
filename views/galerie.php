@@ -2,7 +2,7 @@
 $champTitr = "titreFR";
 $champText = "descFR";
 //Langues
-$i = $_SESSION["lang"];
+$i = isset($_SESSION["lang"]) ? $_SESSION["lang"] : NULL;
 switch ($i) {
     case ("EN"):
         $champTitr = "titreEN";
@@ -42,8 +42,36 @@ switch ($i) {
             }else {
                 while($img =$recup_img->fetch(PDO::FETCH_ASSOC)){
                 echo '<div class="col-md-4 col-xs-6 thumb">';
-                echo ' <a class="thumbnail" href="#">';
-                echo '<img class="img-responsive" src ="'.$img['lurl'].'" alt = "'.$img['lalt'].'" ></a >
+                echo ' <a id="a-thumbnail" class="thumbnail" href="#">';
+                echo '<img class="img-responsive" src ="'.$img['lurl'].'" alt = "';
+
+                    switch ($i){
+                        case("EN"):
+                            echo $img['altEN'];
+                            break;
+                        case ("NL"):
+                            echo $img['altNL'];
+                            break;
+                        default:
+                            echo $img['altFR'];
+                            break;
+                    }
+
+                    echo'" ></a >
+                <div class="img-titre">';
+
+                    switch ($i){
+                        case("EN"):
+                            echo $img['altEN'];
+                            break;
+                        case ("NL"):
+                            echo $img['altNL'];
+                            break;
+                        default:
+                            echo $img['altFR'];
+                            break;
+                    };
+                  echo  '</div>
             </div >';
 
                 }

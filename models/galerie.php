@@ -6,7 +6,7 @@
  * Time: 09:50
  */
 try {
-    $recup_img = $connexion->query("SELECT i.letitre, i.lurl, i.lalt  
+    $recup_img = $connexion->query("SELECT i.letitre, i.lurl, i.altFR, i.altNL, i.altEN  
 FROM images i
 WHERE i.id_rubrique = 3;");
 

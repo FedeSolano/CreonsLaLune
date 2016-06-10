@@ -22,7 +22,7 @@ $titr = $recupTitres->fetchAll(PDO::FETCH_ASSOC);
 
 /*LES IMAGES DE L'ACCUEIL (repris pour l'instant dans la rubrique 3)*/
 try {
-    $recupImg = $connexion->query("SELECT i.letitre, i.lurl, i.lalt  
+    $recupImg = $connexion->query("SELECT i.letitre, i.lurl, i.altFR, i.altNL, i.altEN  
 FROM images i
 WHERE i.id_rubrique = 3 ORDER BY i.id DESC LIMIT 6;");
 
