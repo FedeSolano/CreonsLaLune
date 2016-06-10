@@ -15,6 +15,47 @@ body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+.navl {
+    list-style-type: none;
+    line-height: 50px;
+    color: black;
+}
+
+.navl a:link { /*l'état "non visité". */
+    text-decoration: none;
+    color: black;
+}
+
+.navl a:visited { /*l'état "visité".*/
+    color: black;
+}
+
+.navl a:hover { /*l'état "survolé".*/
+    color: white;
+}
+
+.navl a:active { /* "actif".*/
+    color: white;
+}
+
+.dropdown-menu{
+    margin-top: -0.51px;
+    background-color: #62B0BC;
+}
+
+.navbar-right {
+    float: left !important;
+}
+
+.navbar-toggle {
+    float: left;
+    margin-left: 10px;
+}
+
+.dropdown {
+    float: right;
+}
+
 .img-portfolio {
     margin-bottom: 30px;
 }
@@ -75,22 +116,27 @@ footer {
 
 /* Responsive Styles */
 
-@media(max-width:991px) {
+@media (max-width: 991px) {
     .customer-img,
     .img-related {
         margin-bottom: 30px;
     }
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .img-portfolio {
         margin-bottom: 15px;
+    }
+
+    .navl {
+        margin-right: 100px;
     }
 
     header.carousel .carousel {
         height: 70%;
     }
 }
+
 .panel-heading {
     padding: 5px 15px;
 }

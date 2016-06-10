@@ -28,12 +28,14 @@ if(isset($_POST['lenom'])){
         $_SESSION["lenom"]= $util['lenom'];
         $_SESSION["lemail"]= $util['lemail'];
         $_SESSION["idutil"]= $util['idutil'];
+        $_SESSION['connect']= true;
+        $_SESSION["lang"] = "FR";
 
         // redirection vers l'accueil
-        header("Location: ./");
+        include "models/redirectionJS.php";
 
     }else{
-
+echo"Erreur d'authentification, veuillez réessayer";
     }
 }else{
 

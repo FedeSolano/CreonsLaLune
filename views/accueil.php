@@ -1,21 +1,21 @@
 <?php
-
+$champTitr = "titreFR";
+$champText = "descFR";
 //Langues
-$i = $_GET;
+$i = $_SESSION["lang"];
 switch ($i) {
-    case isset($_GET['fr']):
-        $champTitr = "titreFR";
-        $champText = "descFR";
-        break;
-    case isset($_GET['en']):
+    case ("EN"):
         $champTitr = "titreEN";
         $champText = "descEN";
         break;
-    case isset($_GET['nd']):
+    case ("NL"):
         $champTitr = "titreNL";
         $champText = "descNL";
         break;
 }
+
+
+
 
 $GrandTitre = $titr[0][$champTitr]; // Attention [0]= id"1", [1]= id"2" ect...
 $titre1 = $titr[1][$champTitr];
@@ -65,7 +65,9 @@ $texte2 = nl2br($text[1][$champText]);
                             <h4><i class="fa fa-fw fa-check"></i>Just Do it</h4>
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae
+                                nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda
+                                voluptatibus eveniet incidunt dicta nostrum quod?</p>
                             <a href="#" class="btn btn-default">Learn More</a>
                         </div>
                     </div>
@@ -76,7 +78,9 @@ $texte2 = nl2br($text[1][$champText]);
                             <h4><i class="fa fa-fw fa-gift"></i>Just Do It</h4>
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae
+                                nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda
+                                voluptatibus eveniet incidunt dicta nostrum quod?</p>
                             <a href="#" class="btn btn-default">Learn More</a>
                         </div>
                     </div>
@@ -87,7 +91,9 @@ $texte2 = nl2br($text[1][$champText]);
                             <h4><i class="fa fa-fw fa-compass"></i>Just do it</h4>
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae
+                                nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda
+                                voluptatibus eveniet incidunt dicta nostrum quod?</p>
                             <a href="#" class="btn btn-default">Learn More</a>
                         </div>
                     </div>
@@ -96,15 +102,15 @@ $texte2 = nl2br($text[1][$champText]);
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Notre derniers travaux</h2>
+                <h2 class="page-header">Nos derniers travaux</h2>
             </div>
             <div class="class-lg-10 text-center">
                 <?php
                 while ($img = $recupImg->fetch(PDO::FETCH_ASSOC)) {
                     echo '<div class="col-md-4 col-xs-6 thumb">';
 
-                    echo '<a class="thumbnail" href="'.$img['lurl'].'" data-lightbox="roadtrip" data-title="'.$img['lalt'].'">';
-                    echo '<img class="img-responsive img-hover" src ="'.$img['lurl'].'" alt = "'.$img['lalt'].' data-lightbox="roadtrip" data-title="'.$img['lalt'].'"" ></a >
+                    echo '<a class="thumbnail" href="' . $img['lurl'] . '" data-lightbox="roadtrip" data-title="' . $img['lalt'] . '">';
+                    echo '<img class="img-responsive img-hover" src ="' . $img['lurl'] . '" alt = "' . $img['lalt'] . ' data-lightbox="roadtrip" data-title="' . $img['lalt'] . '"" ></a >
             </div >';
                 }
                 ?>
@@ -113,35 +119,24 @@ $texte2 = nl2br($text[1][$champText]);
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">
-                    <?php
-
-                    echo "Nos clients";
-
-                    ?>
+                    Nos partenaires
                 </h2>
             </div>
-            <marquee BEHAVIOR="" class="banniere" scrolammount="25" loop="654" width="75%" height="100%"><br><br>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-                </div>
+            <marquee width="100%" height="100%"><br><br>
 
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
+                <img src="http://placehold.it/200x100" alt="">
 
-            </marquee>
+            </marquee> 
         </div>
         <!-- /.row -->
 
