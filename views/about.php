@@ -25,7 +25,8 @@
                 <img class="img-responsive" src="http://placehold.it/750x450" alt="">
             </div>
             <div class="col-md-6">
-                <h2>About Modern Business</h2>
+                <h2><?php
+                    ?></h2>
                 <?php
                 if(isset ($_GET['about']) && isset ($_GET['nd']))
                 echo'test ND';
