@@ -17,7 +17,7 @@ switch ($i) {
 <!-- Page Content -->
     <div class="container">
 
-        <div class="row">
+        <div class="row" id="paginacion">
 
             <div class="col-lg-12">
                 <h1 class="page-header"><?php
@@ -78,8 +78,8 @@ switch ($i) {
             }
 
             ?>
-           
         </div>
+       <div class="col-sm-offset-4 col-sm-4 col-sm-offset-4" id="pagination"></div>
 
 
 
